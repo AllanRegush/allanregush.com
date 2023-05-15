@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+    <div class="bg-black text-white py-20">
+        <div
+            class="container mx-auto flex flex-col items-center my-12 md:my-24"
+        >
+            <h1>{frontmatter.title}</h1>
+            <p>Written by {frontmatter.author}</p>
+            <div class="text-left p-8">
+                <slot />
+            </div>
+        </div>
+    </div>
+</BaseLayout>

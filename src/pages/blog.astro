@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+const pageTitle: string = "Blog";
+const allPosts: Readonly<Record<string, any>> = await Astro.glob(
+	"../pages/posts/*.md"
+);
+---
+
+<BaseLayout pageTitle={pageTitle}>
+	<div class="dark:bg-black flex flex-col items-center">
+		{
+			allPosts.map(
+				(post: {
+					url: string | URL | null | undefined;
+					frontmatter: { title: unknown };
+				}) => (
+					<li>
+						<BlogPost post={post} />{" "}
+					</li>
+				)
+			)
+		}
+	</div>
+</BaseLayout>

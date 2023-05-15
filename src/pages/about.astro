@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import avatar from "/avatar.png"
+const pageTitle: string = "About"
+---
+
+<BaseLayout pageTitle={pageTitle}>
+	<section>
+		<div class="bg-black text-white py-20">
+			<div
+				class="container mx-auto flex flex-col md:flex-row content-center my-12 md:my-24"
+			>
+			
+				<img class="w-full" src={avatar} />
+			<div>
+				<p
+				class="mb-3 pt-40 text-gray-500 dark:text-gray-400 justify-center text-center"
+			>
+			Allan Regush is a hardware and software developer who specializes in using KiCAD and programming languages such as C++, C#, and TypeScript. They have experience developing both simple and complex projects, from circuit design to full-stack software development. With their strong foundation in electrical engineering/computer science principles and hands-on expertise in prototyping and testing, they deliver high-quality solutions that meet project requirements on time and within budget. In addition to technical skills, Allan Regush excels at effective communication and collaboration, working seamlessly across teams to achieve common goals.
+			</p>
+			</div>
+
+			</div>
+		</div>
+</BaseLayout>
+

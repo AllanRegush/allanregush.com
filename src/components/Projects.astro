@@ -1,0 +1,14 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import { Projects, Project } from '../data/projects.ts';
+---
+
+<section id="projects">
+    <div class="container px-6 py-8 mx-auto">
+        <div class="flex flex-col items-center justify-center space-y-8 lg:-mx-4 lg:flex-row lg:items-stretch lg:space-y-0">
+                {Projects.map((project: Project) => {
+                    return <ProjectCard data={project} />
+                })}
+        </div>
+    </div>
+</section>
