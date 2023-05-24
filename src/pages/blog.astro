@@ -8,7 +8,7 @@ const allPosts: Readonly<Record<string, any>> = await Astro.glob(
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<div class="dark:bg-black flex flex-col items-center">
+	<div class="bg-black flex flex-col items-center">
 		{
 			allPosts.map(
 				(post: {
