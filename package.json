@@ -1,17 +1,26 @@
 {
   "name": "blog-tut",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
+    "fmt": "prettier --write \"src/**/*.{js,jsx,astro}\"",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^3.1.2",
-    "astro": "^2.4.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.10.0",
     "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^7.12.0",
+    "eslint": "^9.4.0",
+    "eslint-plugin-astro": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "prettier": "^3.3.1",
+    "prettier-plugin-astro": "^0.14.0"
   }
 }
