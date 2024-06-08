@@ -5,11 +5,11 @@ export type Project = {
     img: string
 };
 
-export const Projects = [
+export const Projects: Project[] = [
     {
         title: "Zen",
         description: "Bare Bones OS Kernel Written in C++",
         url: "https://github.com/AllanRegush/Zen",
         img: "/zen.png"
     }
-];
+] as const;
