@@ -1,5 +1,6 @@
 ---
-
+import { Image } from 'astro:assets'
+import PCB from '../assets/images/pcb-board.jpg'
 ---
 
 <section>
@@ -26,10 +27,12 @@
       >
         <div class="h-48 flex flex-wrap content-center">
           <div>
+            <Image class="inline-block mt-24 md:mt-0 p-8 md:p-0 rounded-lg" src={PCB} alt="PCB" />
+            <!--
             <img
               class="inline-block mt-24 md:mt-0 p-8 md:p-0 rounded-lg"
-              src="/pcb-board.jpg"
-            />
+              src="/pcb-board.jpg" >
+              --> 
           </div>
         </div>
       </div>

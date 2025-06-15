@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import Avatar  from "../assets/images/avatar.png";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle: string = "About";
 ---
@@ -9,7 +11,7 @@ const pageTitle: string = "About";
       <div
         class="container mx-auto flex flex-col md:flex-row content-center my-12 md:my-24"
       >
-        <img class="w-full" src="/avatar.png" />
+        <Image class="w-full" src={Avatar} alt="Avatar" />
         <div>
           <p
             class="mb-3 pt-40 text-gray-500 dark:text-gray-400 justify-center text-center"
